@@ -1,3 +1,10 @@
+Bold Point
+
+Forecast API Update:
+The 7-day forecast feature isn't working as the API requires a paid subscription after key creation. As an alternative, I've implemented hourly weather updates to ensure users still get relevant weather info. Let me know if we should explore other free APIs.
+
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
