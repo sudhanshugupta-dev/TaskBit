@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons"; // vector icon import
+import { Ionicons } from "@expo/vector-icons";
 import * as Location from 'expo-location';
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
@@ -91,7 +91,7 @@ export default function ForecastScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Header with back button */}
+     
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
           <Ionicons name="arrow-back" size={28} color="#fff" />

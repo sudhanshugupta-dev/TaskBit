@@ -9,8 +9,8 @@ export default function SplashScreen() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      router.replace('/home'); // your ForecastScreen route
-    }, 2500); // wait 2.5 seconds
+      router.replace('/home'); 
+    }, 2500); 
 
     return () => clearTimeout(timeout);
   }, []);
@@ -21,7 +21,7 @@ export default function SplashScreen() {
       style={styles.container}
     >
       <Image
-        source={require('../assets/cloudy.png')} // weather icon
+        source={require('../assets/cloudy.png')} 
         style={styles.logo}
         resizeMode="contain"
       />
