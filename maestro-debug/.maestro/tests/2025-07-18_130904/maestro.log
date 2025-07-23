@@ -1,0 +1,39 @@
+13:09:04.158 [ INFO] MAESTRO.logSystemInfo: ---- System Info ----
+13:09:04.160 [ INFO] MAESTRO.logSystemInfo: Maestro Version: 1.41.0
+13:09:04.161 [ INFO] MAESTRO.logSystemInfo: CI: Undefined
+13:09:04.161 [ INFO] MAESTRO.logSystemInfo: OS Name: Linux
+13:09:04.161 [ INFO] MAESTRO.logSystemInfo: OS Version: 6.8.0-60-generic
+13:09:04.161 [ INFO] MAESTRO.logSystemInfo: Architecture: amd64
+13:09:04.161 [ INFO] MAESTRO.logSystemInfo: Java Version: 17
+13:09:04.165 [ INFO] MAESTRO.logSystemInfo: Xcode Version: null
+13:09:04.535 [DEBUG] io.micrometer.common.util.internal.logging.InternalLoggerFactory.newDefaultFactory: Using SLF4J as the default logging framework
+13:09:04.622 [ INFO] MAESTRO.logSystemInfo: Flutter Version: 3.29.2
+13:09:05.122 [ INFO] MAESTRO.logSystemInfo: Flutter Channel: stable
+13:09:05.122 [ INFO] MAESTRO.logSystemInfo: ---------------------
+13:09:05.508 [ INFO] maestro.cli.command.TestCommand.runShardSuite: [shard 1] Selected device LMQ7109b61351 using port 7001 with execution plan ExecutionPlan(flowsToRun=[/home/bitcot/TaskBit/.maestro/blackscreen_test.yaml], sequence=FlowSequence(flows=[], continueOnFailure=true), workspaceConfig=WorkspaceConfig(flows=null, includeTags=null, excludeTags=null, local=null, executionOrder=null, baselineBranch=null, notifications=null, disableRetries=false, platform=PlatformConfiguration(android=AndroidConfiguration(disableAnimations=false), ios=IOSConfiguration(disableAnimations=false, snapshotKeyHonorModalViews=null))))
+13:09:05.724 [ INFO] maestro.Maestro.invoke: Getting device info
+13:09:05.891 [ INFO] maestro.Maestro.invoke: Got device info: DeviceInfo(platform=ANDROID, widthPixels=1080, heightPixels=2160, widthGrid=1080, heightGrid=2160)
+13:09:05.982 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Define variables RUNNING
+13:09:05.986 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Define variables metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(defineVariablesCommand=DefineVariablesCommand(env={MAESTRO_FILENAME=blackscreen_test}, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:05.989 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Define variables COMPLETED
+13:09:05.991 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Apply configuration RUNNING
+13:09:05.992 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Apply configuration metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(applyConfigurationCommand=ApplyConfigurationCommand(config=MaestroConfig(appId=com.sudhanshu30602.TaskBit, name=null, tags=[], ext={}, onFlowStart=null, onFlowComplete=null), label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:05.993 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Apply configuration COMPLETED
+13:09:05.995 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-0 is visible RUNNING
+13:09:05.996 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-0 is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=list-item-0, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:06.215 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-0 is visible COMPLETED
+13:09:06.216 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 400 ms RUNNING
+13:09:06.217 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 400 ms metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(swipeCommand=SwipeCommand(direction=LEFT, startPoint=null, endPoint=null, elementSelector=null, startRelative=null, endRelative=null, duration=400, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:07.846 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 400 ms COMPLETED
+13:09:07.848 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible RUNNING
+13:09:07.849 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=list-item-1, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:08.010 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible COMPLETED
+13:09:08.012 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms RUNNING
+13:09:08.014 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(swipeCommand=SwipeCommand(direction=LEFT, startPoint=null, endPoint=null, elementSelector=null, startRelative=null, endRelative=null, duration=1500, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:12.635 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms COMPLETED
+13:09:12.637 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-2 is visible RUNNING
+13:09:12.638 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-2 is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=list-item-2, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+13:09:30.085 [ERROR] maestro.orchestra.Orchestra.executeCommands: [Command execution] CommandFailed: Assertion is false: id: list-item-2 is visible
+13:09:30.087 [ INFO] maestro.Maestro.takeScreenshot: Taking screenshot
+13:09:30.088 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+13:09:30.575 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-2 is visible FAILED

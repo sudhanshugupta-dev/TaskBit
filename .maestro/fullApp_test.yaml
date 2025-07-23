@@ -1,0 +1,112 @@
+# maestro/weather_test.yaml
+appId: com.sudhanshu30602.TaskBit
+
+---
+# - launchApp:
+#     clearState: true
+
+# - waitForAnimationToEnd
+
+- assertVisible: "Hourly Forecast"
+
+- assertVisible: "Next hours >"
+
+- assertVisible:
+    id: WeatherCard
+
+- swipe:
+    direction: LEFT
+    on:
+      id: Forecast
+
+- repeat:
+    times: 3
+    commands:
+      - swipe:
+          direction: LEFT
+          on:
+            id: "Forecast"
+
+
+# - scrollUntilVisible:
+#     element:
+#       id: "Forecast_9"
+#     direction: RIGHT
+
+# - repeat:
+#     times: 3
+#     commands:
+#       - swipe:
+#           start: "90%,50%"
+#           end: "10%,50%"
+#           duration: 400
+
+# - swipe:
+#     element: "Forecast_9"
+#     start: 90%, 50%
+#     end: 10%, 50%  # 👉 swipes left across the screen
+#     duration: 400
+
+- tapOn: "Next hours >"
+
+- scrollUntilVisible:
+    element:
+      id: "ForecastItem_9"
+    direction: DOWN
+
+- tapOn: "next"
+
+- assertVisible: "blackscreen"
+
+- tapOn:
+    id: "email-input"
+- inputText:
+    id: "email-input"
+    text: "user@example.com"
+
+- tapOn:
+    id: "password-input"
+- inputText:
+    id: "password-input"
+    text: "123456"
+
+- tapOn:
+    id: "submit-button"
+
+- assertVisible: "Form submitted successfully."
+
+- tapOn: "Ok"
+
+- assertVisible: "Cart"
+
+# Step 1: Cart Overview
+- assertVisible: "Wireless Headphones"
+- assertVisible: "$120"
+- assertVisible: "Fitness Band"
+- assertVisible: "$60"
+- tapOn: "Remove" # Remove 1 item
+- assertNotVisible: "Wireless Headphones"
+- tapOn:
+    id: "next-button"
+
+# Step 2: Shipping Address
+- assertVisible: "Shipping Address"
+- inputText:
+    id: "address-input"
+    text: "456 Test Lane"
+- hideKeyboard
+- tapOn:
+    id: "next-button"
+
+# Step 3: Payment
+- assertVisible: "Card Information"
+- inputText:
+    id: "card-input"
+    text: "4242424242424242"
+
+- tapOn:
+    id: "next-button"
+
+# Step 4: Confirmation
+- assertVisible: "Payment Successful!"
+- takeScreenshot: checkout_success

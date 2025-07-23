@@ -1,0 +1,18 @@
+# maestro/weather_test.yaml
+appId: com.sudhanshu30602.TaskBit
+
+---
+- assertVisible: # Same note applies as above
+    id: ForeCastItem_0
+
+# - scrollUntilVisible:
+#     id: "ForecastItem_6"
+#     direction: "DOWN"
+
+- pressKey: BACK
+# Verify forecast screen content
+- tapOn: "Next hours >"
+
+- tapOn: "next"
+
+- takeScreenshot: "forecast_screen"

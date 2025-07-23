@@ -1,39 +1,55 @@
-import * as Location from 'expo-location';
+import * as Location from "expo-location";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Dimensions,
   FlatList,
-  StyleSheet,
+  SafeAreaView,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 
 import ForecastItem from "../components/ForecastItem";
-import WeatherCard from "../components/WeatherCard";
-import { getCurrentWeather, getForecast } from '../utils/api';
-import { unixToTime } from "../utils/conversion";
+import { getWeather } from "../utils/api";
+import styles from "./home-style";
 
-export default function HomeScreen() {
+const { width } = Dimensions.get("window");
+
+const HomeScreen = () => {
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
-    (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') return;
+    const fetchWeatherData = async () => {
+      try {
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== "granted") {
+          console.warn("Location permission not granted");
+          return;
+        }
 
-      let location = await Location.getCurrentPositionAsync({});
-      const { latitude, longitude } = location.coords;
+        const location = await Location.getCurrentPositionAsync({});
+        const { latitude, longitude } = location.coords;
 
-      const weatherData = await getCurrentWeather(latitude, longitude);
-      const forecastData = await getForecast(latitude, longitude);
+        const currentstatus = "weather";
+        const forecaststatus = "forecast";
+        const [weatherData, forecastData] = await Promise.all([
+          getWeather(latitude, longitude, currentstatus),
+          getWeather(latitude, longitude, forecaststatus),
+        ]);
 
-      setWeather(weatherData);
-      setForecast(forecastData);
-    })();
+        setWeather(weatherData);
+        setForecast(forecastData);
+        //setForecast(null);
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+      }
+    };
+
+    fetchWeatherData();
   }, []);
 
   if (!weather || !forecast) {
@@ -45,40 +61,40 @@ export default function HomeScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={{ marginTop: 20, height: '60%' }}>
+    <SafeAreaView style={styles.container}>
+      {/* <View style={styles.cards}>
         <WeatherCard weather={weather} />
-      </View>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 }}>
+      </View> */}
+      <View style={styles.hours}>
         <Text style={styles.sectionTitle}>Hourly Forecast</Text>
-        <TouchableOpacity onPress={() => router.push("/forecast")}>
+        <TouchableOpacity
+          onPress={() =>
+            router.push({
+              pathname: "/forecast",
+              params: { forecast: JSON.stringify(forecast) },
+            })
+          }
+        >
           <Text style={styles.sectionTitle}>Next hours ></Text>
         </TouchableOpacity>
       </View>
-      <View style={{ height: '20%' }}>
+      <View style={styles.section}>
         <FlatList
           data={forecast.list}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
-            <ForecastItem time={unixToTime(item.dt)} temp={item.temp} item={item} />
-          )}
-          horizontal
+          renderItem={ForecastItem}
+          keyExtractor={(item) => item.id}
+          horizontal={true}
           showsHorizontalScrollIndicator={false}
+          pagingEnabled={false} // Set to true if you want page-by-page scrolling
+          decelerationRate="fast"
+          // snapToInterval={width * 0.8} // Optional: snap to items
+          snapToAlignment="center"
+          contentContainerStyle={styles.flatListContent}
+          testID="horizontal-flatlist" // Important for Maestro testing
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    flex: 1,
-    backgroundColor: "#F0F8FF"
-  },
-  sectionTitle: {
-    fontWeight: "bold",
-    fontSize: 16,
-    color: 'grey'
-  }
-});
+export default HomeScreen;

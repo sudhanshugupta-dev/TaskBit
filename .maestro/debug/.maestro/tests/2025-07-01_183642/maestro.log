@@ -1,0 +1,9 @@
+18:36:42.751 [ INFO] MAESTRO.logSystemInfo: ---- System Info ----
+18:36:42.761 [ INFO] MAESTRO.logSystemInfo: Maestro Version: 1.41.0
+18:36:42.762 [ INFO] MAESTRO.logSystemInfo: CI: Undefined
+18:36:42.763 [ INFO] MAESTRO.logSystemInfo: OS Name: Linux
+18:36:42.763 [ INFO] MAESTRO.logSystemInfo: OS Version: 6.8.0-60-generic
+18:36:42.763 [ INFO] MAESTRO.logSystemInfo: Architecture: amd64
+18:36:42.763 [ INFO] MAESTRO.logSystemInfo: Java Version: 17
+18:36:42.780 [ INFO] MAESTRO.logSystemInfo: Xcode Version: null
+18:36:43.089 [DEBUG] io.micrometer.common.util.internal.logging.InternalLoggerFactory.newDefaultFactory: Using SLF4J as the default logging framework

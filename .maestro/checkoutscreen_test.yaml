@@ -1,0 +1,35 @@
+appId: com.sudhanshu30602.TaskBit
+---
+- assertVisible: "Cart"
+
+# Step 1: Cart Overview
+- assertVisible: "Wireless Headphones"
+- assertVisible: "$120"
+- assertVisible: "Fitness Band"
+- assertVisible: "$60"
+- tapOn: "Remove" # Remove 1 item
+- assertNotVisible: "Wireless Headphones"
+- tapOn:
+    id: "next-button"
+
+# Step 2: Shipping Address
+- assertVisible: "Shipping Address"
+- inputText:
+    id: "address-input"
+    text: "456 Test Lane"
+- hideKeyboard
+- tapOn:
+    id: "next-button"
+
+# Step 3: Payment
+- assertVisible: "Card Information"
+- inputText:
+    id: "card-input"
+    text: "4242424242424242"
+
+- tapOn:
+    id: "next-button"
+
+# Step 4: Confirmation
+- assertVisible: "Payment Successful!"
+- takeScreenshot: checkout_success

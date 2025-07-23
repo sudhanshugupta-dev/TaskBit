@@ -1,0 +1,75 @@
+10:46:31.798 [ INFO] MAESTRO.logSystemInfo: ---- System Info ----
+10:46:31.799 [ INFO] MAESTRO.logSystemInfo: Maestro Version: 1.41.0
+10:46:31.800 [ INFO] MAESTRO.logSystemInfo: CI: Undefined
+10:46:31.800 [ INFO] MAESTRO.logSystemInfo: OS Name: Linux
+10:46:31.800 [ INFO] MAESTRO.logSystemInfo: OS Version: 6.8.0-60-generic
+10:46:31.800 [ INFO] MAESTRO.logSystemInfo: Architecture: amd64
+10:46:31.800 [ INFO] MAESTRO.logSystemInfo: Java Version: 17
+10:46:31.802 [ INFO] MAESTRO.logSystemInfo: Xcode Version: null
+10:46:32.271 [DEBUG] io.micrometer.common.util.internal.logging.InternalLoggerFactory.newDefaultFactory: Using SLF4J as the default logging framework
+10:46:32.289 [ INFO] MAESTRO.logSystemInfo: Flutter Version: 3.29.2
+10:46:32.692 [ INFO] MAESTRO.logSystemInfo: Flutter Channel: stable
+10:46:32.692 [ INFO] MAESTRO.logSystemInfo: ---------------------
+10:46:32.985 [ INFO] maestro.cli.command.TestCommand.runShardSuite: [shard 1] Selected device emulator-5554 using port 7001 with execution plan ExecutionPlan(flowsToRun=[/home/bitcot/TaskBit/.maestro/home_test.yaml], sequence=FlowSequence(flows=[], continueOnFailure=true), workspaceConfig=WorkspaceConfig(flows=null, includeTags=null, excludeTags=null, local=null, executionOrder=null, baselineBranch=null, notifications=null, disableRetries=false, platform=PlatformConfiguration(android=AndroidConfiguration(disableAnimations=false), ios=IOSConfiguration(disableAnimations=false, snapshotKeyHonorModalViews=null))))
+10:46:35.098 [ INFO] maestro.Maestro.invoke: Getting device info
+10:46:35.302 [ INFO] maestro.Maestro.invoke: Got device info: DeviceInfo(platform=ANDROID, widthPixels=1080, heightPixels=2400, widthGrid=1080, heightGrid=2400)
+10:46:35.387 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Define variables RUNNING
+10:46:35.390 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Define variables metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(defineVariablesCommand=DefineVariablesCommand(env={MAESTRO_FILENAME=home_test}, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:35.393 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Define variables COMPLETED
+10:46:35.394 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Apply configuration RUNNING
+10:46:35.396 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Apply configuration metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(applyConfigurationCommand=ApplyConfigurationCommand(config=MaestroConfig(appId=com.sudhanshu30602.TaskBit, name=null, tags=[], ext={}, onFlowStart=null, onFlowComplete=null), label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:35.397 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Apply configuration COMPLETED
+10:46:35.398 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that "Hourly Forecast" is visible RUNNING
+10:46:35.399 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that "Hourly Forecast" is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=Hourly Forecast, idRegex=null, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:35.600 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that "Hourly Forecast" is visible COMPLETED
+10:46:35.601 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that "Next hours >" is visible RUNNING
+10:46:35.603 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that "Next hours >" is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=Next hours >, idRegex=null, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:35.767 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that "Next hours >" is visible COMPLETED
+10:46:35.768 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: WeatherCard is visible RUNNING
+10:46:35.769 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: WeatherCard is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=WeatherCard, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:35.928 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: WeatherCard is visible COMPLETED
+10:46:35.929 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-0 is visible RUNNING
+10:46:35.930 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-0 is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=list-item-0, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:36.131 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-0 is visible COMPLETED
+10:46:36.133 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms RUNNING
+10:46:36.134 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(swipeCommand=SwipeCommand(direction=LEFT, startPoint=null, endPoint=null, elementSelector=null, startRelative=null, endRelative=null, duration=1500, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:38.073 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms COMPLETED
+10:46:38.074 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible RUNNING
+10:46:38.076 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=list-item-1, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:38.226 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible COMPLETED
+10:46:38.227 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms RUNNING
+10:46:38.228 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(swipeCommand=SwipeCommand(direction=LEFT, startPoint=null, endPoint=null, elementSelector=null, startRelative=null, endRelative=null, duration=1500, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:40.142 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in LEFT direction in 1500 ms COMPLETED
+10:46:40.144 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in RIGHT direction in 400 ms RUNNING
+10:46:40.146 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in RIGHT direction in 400 ms metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(swipeCommand=SwipeCommand(direction=RIGHT, startPoint=null, endPoint=null, elementSelector=null, startRelative=null, endRelative=null, duration=400, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:40.905 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in RIGHT direction in 400 ms COMPLETED
+10:46:40.907 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible RUNNING
+10:46:40.908 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(assertConditionCommand=AssertConditionCommand(condition=Condition(platform=null, visible=ElementSelector(textRegex=null, idRegex=list-item-1, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), notVisible=null, scriptCondition=null, label=null), timeout=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:41.082 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Assert that id: list-item-1 is visible COMPLETED
+10:46:41.084 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in RIGHT direction in 400 ms RUNNING
+10:46:41.085 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in RIGHT direction in 400 ms metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(swipeCommand=SwipeCommand(direction=RIGHT, startPoint=null, endPoint=null, elementSelector=null, startRelative=null, endRelative=null, duration=400, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:42.017 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Swiping in RIGHT direction in 400 ms COMPLETED
+10:46:42.019 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Tap on "Next hours >" RUNNING
+10:46:42.021 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Tap on "Next hours >" metadata CommandMetadata(numberOfRuns=null, evaluatedCommand=MaestroCommand(tapOnElementCommand=TapOnElementCommand(selector=ElementSelector(textRegex=Next hours >, idRegex=null, size=null, below=null, above=null, leftOf=null, rightOf=null, containsChild=null, containsDescendants=null, traits=null, index=null, enabled=null, optional=false, selected=null, checked=null, focused=null, childOf=null, css=null), retryIfNoChange=false, waitUntilVisible=false, longPress=false, repeat=null, waitToSettleTimeoutMs=null, label=null, optional=false)), logMessages=[], insight=Insight(message=, level=NONE), aiReasoning=null, labeledCommand=null)
+10:46:42.185 [ INFO] maestro.Maestro.tap-BUbHBYE: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Next hours >, accessibilityText=, hintText=, ignoreBoundsFiltering=false, resource-id=, clickable=false, bounds=[789,1666][1028,1723], enabled=true, focused=false, checked=false, scrollable=false, selected=false, class=android.widget.TextView}, children=[], clickable=false, enabled=true, focused=false, checked=false, selected=false), bounds=Bounds(x=789, y=1666, width=239, height=57))
+10:46:43.417 [ INFO] maestro.Maestro.tap-BUbHBYE: Refreshed element
+10:46:43.418 [ INFO] maestro.Maestro.hierarchyBasedTap-hbl3e4M: Tapping at (908, 1694) using hierarchy based logic for wait
+10:46:43.419 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to byte array
+10:46:43.419 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+10:46:44.689 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to byte array
+10:46:44.689 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+10:46:45.421 [ INFO] maestro.Maestro.hierarchyBasedTap-hbl3e4M: Screenshots are not different enough (d=0.0)
+10:46:45.422 [ INFO] maestro.Maestro.hierarchyBasedTap-hbl3e4M: Nothing changed in the UI.
+10:46:45.422 [ INFO] maestro.cli.runner.MaestroCommandRunner.invoke: Tap on "Next hours >" COMPLETED
+10:46:45.999 [ INFO] maestro.drivers.AndroidDriver.close: [Start] close port forwarder
+10:46:51.000 [ INFO] maestro.drivers.AndroidDriver.close: [Done] close port forwarder
+10:46:51.000 [ INFO] maestro.drivers.AndroidDriver.close: [Start] Remove host port from port forwarder map
+10:46:51.000 [ INFO] maestro.drivers.AndroidDriver.close: [Done] Remove host port from port forwarder map
+10:46:51.000 [ INFO] maestro.drivers.AndroidDriver.close: [Start] Remove host port from port to allocation map
+10:46:51.000 [ INFO] maestro.drivers.AndroidDriver.close: [Done] Remove host port from port to allocation map
+10:46:51.000 [ INFO] maestro.drivers.AndroidDriver.close: [Start] Uninstall driver from device
+10:46:51.332 [ INFO] maestro.drivers.AndroidDriver.close: [Done] Uninstall driver from device
+10:46:51.332 [ INFO] maestro.drivers.AndroidDriver.close: [Start] Close instrumentation session
+10:46:51.332 [ INFO] maestro.drivers.AndroidDriver.close: [Done] Close instrumentation session
+10:46:51.332 [ INFO] maestro.drivers.AndroidDriver.close: [Start] Shutdown GRPC channel
+10:46:51.334 [ INFO] maestro.drivers.AndroidDriver.close: [Done] Shutdown GRPC channel

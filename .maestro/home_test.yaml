@@ -1,0 +1,88 @@
+# maestro/weather_test.yaml
+appId: com.sudhanshu30602.TaskBit
+
+---
+# - launchApp
+
+# - launchApp:
+#     clearState: true
+
+# - waitForAnimationToEnd
+# - waitForAnimationToEnd
+
+- assertVisible: "Hourly Forecast"
+
+- assertVisible: "Next hours >"
+
+# - assertVisible:
+#     id: WeatherCard # Only if "WeatherCard" is text visible on screen
+# OR use `tapOn` / `assertVisible` with `id:` if supported by your component
+
+# - scrollUntilVisible:
+#     id: "ForecastItem_6"
+#     direction: " LEFT"
+
+#     swipe:
+#       start:
+#         x: 0.5
+#         y: 0.7
+#       end:
+#         x: 0.5
+#         y: 0.5
+
+- assertVisible:
+    id: "list-item-0" # Assuming your items have testID like "list-item-0"
+
+- swipe:
+    direction: LEFT
+    on:
+      id: "horizontal-flatlist"
+
+- assertVisible:
+    id: "list-item-1"
+
+- swipe:
+    direction: LEFT
+    on:
+      id: "horizontal-flatlist"
+
+- assertVisible:
+    id: "list-item-2"
+# Test horizontal scroll to the  LEFT
+# Scroll slowly so it's visible to user
+
+# Verify that we've scrolled - second item should be visible
+- assertVisible:
+    id: "list-item-3"
+
+# Continue scrolling  LEFT to test multiple items
+- swipe:
+    direction: LEFT
+    on:
+      id: "horizontal-flatlist"
+    # speed: fast
+    # duration: 1500
+
+- assertVisible:
+    id: "list-item-4"
+
+- assertVisible:
+    id: "list-item-5"
+
+# Test scroll back to the  LEFT
+- swipe:
+    direction: LEFT
+    on:
+      id: "horizontal-flatlist"
+
+# Verify we can scroll back
+- assertVisible:
+    id: "list-item-6"
+
+# Test edge case - scroll to the beginning
+- swipe:
+    direction: LEFT
+    on:
+      id: "horizontal-flatlist"
+
+- tapOn: "Next hours >"
